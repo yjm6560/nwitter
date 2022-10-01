@@ -1,9 +1,7 @@
-// Import the functions you need from the SDKs you need
+// https://github.com/yjm6560/nwitter/issues/2 참고
 import { initializeApp } from "firebase/app";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+import { getAuth } from "firebase/auth";
 
-// Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_API_KEY,
   authDomain: process.env.REACT_APP_AUTH_DOMAIN,
@@ -14,4 +12,6 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-export default initializeApp(firebaseConfig);
+initializeApp(firebaseConfig);
+
+export const authService = getAuth();
